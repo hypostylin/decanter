@@ -177,7 +177,7 @@
                     <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block">Interactive Product Experience</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Experience Decanter in Action</h2>
                     <p class="text-base text-slate-300 leading-relaxed">
-                        See why high-growth operations teams are replacing static documentation with Decanter. On the left: the unedited, 4-page SOP document your staff ignores. On the right: the instant, clickable micro-app they will use every day. Click through the 4 live production workflows below to experience the difference.
+                        See why high-growth operations teams are replacing static documentation with Decanter. On the left: the unedited, full-length SOP documents your staff ignores. On the right: the instant, clickable micro-app they will use every day. Click through the 4 live production workflows below to experience the difference.
                     </p>
                 </div>
                 
@@ -193,60 +193,296 @@
             <!-- Side-by-Side Teardown Engine Frame -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
                 
-                <!-- Left Pane: Raw Un-decanted Document -->
+                <!-- Left Pane: Raw Un-decanted Document (100% Complete & Unabridged) -->
                 <div class="lg:col-span-5 flex flex-col space-y-2">
                     <div class="flex items-center justify-between text-xs font-mono px-1">
                         <span class="text-rose-400 font-bold flex items-center gap-1.5">
                             <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-                            Raw Source (Murky Sediment)
+                            Raw Source Document (100% Unabridged)
                         </span>
                         <span id="doc-name-tag" class="text-slate-500">Tracking Moves Management in Salesforce.docx.pdf</span>
                     </div>
 
-                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 flex-1 overflow-y-auto max-h-[640px] space-y-4 paper-shadow">
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 flex-1 overflow-y-auto max-h-[640px] space-y-6 paper-shadow">
                         
-                        <!-- Doc 1: Moves Management Unabridged -->
-                        <div id="doc-content-moves" class="bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-none">
-                            <div class="border-b border-slate-300 pb-2">
-                                <h3 class="font-bold text-sm font-sans">Moves Management for Leadership and Annual Giving</h3>
-                                <p class="text-[10px] text-slate-500 font-sans">Standard Operating Procedures | Created Sept 30, 2022</p>
+                        <!-- Doc 1: Moves Management (Full Text Across All 4 Pages) -->
+                        <div id="doc-content-moves" class="space-y-4">
+                            <!-- Page 1 -->
+                            <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
+                                <div>
+                                    <h3 class="font-bold text-sm font-sans text-black">Moves Management for Leadership and Annual Giving</h3>
+                                    <p class="text-[10px] text-slate-600 font-sans">Standard Operating Procedures</p>
+                                    <p class="text-[10px] text-slate-600 font-sans">Created: September 30, 2022</p>
+                                </div>
+                                <h4 class="font-sans font-bold text-xs text-black mt-2">Portfolio Assignments</h4>
+                                <p class="text-justify text-slate-800">Each member of the Development team whose job description includes frontline fundraising responsibility will manage a portfolio of private contributors and prospects. Additional members may have a select group of prospects that merit personalization or specialized attention in their fundraising areas.</p>
+                                
+                                <h4 class="font-sans font-bold text-xs text-black mt-2">Rules, Procedures & Guidelines</h4>
+                                <ol class="list-decimal list-outside ml-4 space-y-1 text-slate-800">
+                                    <li>Only OppNet Fundraising staff will be assigned as account owners in Salesforce for individuals or entities being managed for fundraising purposes. Other OppNet staff and leadership, including members of the Board of Directors, may play a vital role in the identification, cultivation, solicitation, and stewardship of fundraising prospects, but will not be assigned as owners of these accounts.</li>
+                                    <li>Gift officers should review their portfolios at least every three months with the staff managing Development Operations. During these review sessions, the goals should be:
+                                        <div class="ml-3 mt-0.5 space-y-0.5">
+                                            <p>a. To ensure that current portfolio assignments are appropriate and that reassignments to new owners are made if needed</p>
+                                            <p>b. To ensure that all opportunity stages for prospects are accurate</p>
+                                            <p>c. To adjust the portfolio size by either adding new or unassigned accounts</p>
+                                        </div>
+                                    </li>
+                                    <li>The gift officer is responsible for updating OR asking Development Associate (cc'ing Senior Development Manager and Senior Director of Development) to update Contact Information as needed on the Contact page. This includes but is not limited to: Name, Title, Phone, Email, Address, and Affiliations.</li>
+                                </ol>
+
+                                <h4 class="font-sans font-bold text-xs text-black mt-2">Opportunities</h4>
+                                <p class="text-justify text-slate-800">Opportunities in Salesforce represent prospective and firm asks for charitable contributions in the fundraising pipeline. They are created when a gift officer has a firm lead on a prospect and anticipates making an ask within the FY. For more information on creating an Opportunity, please reference How To - Gift Processing.docx in C:\Users\user\Dropbox (OppNet)\OppNet Development\Documentation, Policies, and Procedures\How To Documentation - Salesforce.</p>
+
+                                <h4 class="font-sans font-bold text-xs text-black mt-2">Creating Opportunities</h4>
+                                <p class="text-justify text-slate-800">At the beginning of the Fiscal Year, each Gift Officer will make projections based on previous fundraising progress and potential new and upgraded prospects. These will be bulk imported (created or updated, depending if an Opportunity already exists) into Salesforce.</p>
+                                <p class="text-justify text-slate-800">If a new Opportunity emerges throughout the FY, the respective Gift Officer should add the Opportunity or send the following details to the Development Associate (cc'ing Senior Development Manager) with the following information:</p>
+                                <div class="ml-2 space-y-0.5 text-slate-800 font-sans font-medium text-[11px]">
+                                    <p>Contact</p>
+                                    <p>Account (Household or Company)</p>
+                                    <p>Campaign</p>
+                                    <p>Restriction (if applicable)</p>
+                                    <p>Stage*</p>
+                                </div>
                             </div>
-                            <p class="font-sans font-bold text-[11px] text-black"># Portfolio Assignments</p>
-                            <p class="text-justify text-slate-700">Each member of the Development team whose job description includes frontline fundraising responsibility will manage a portfolio... Only OppNet Fundraising staff will be assigned as account owners in Salesforce. Other staff and leadership, including Board members, will not be assigned as owners[cite: 1]...</p>
-                            <p class="font-sans font-bold text-[11px] text-black pt-1"># Opportunities & Stage Rules</p>
-                            <p class="text-justify text-slate-700">Stages must be maintained: Prospect, Cultivation, Solicitation, Committed, Received, Declined, and Withdrawn[cite: 1, 2]. When in Prospect stage, close date defaults to 9/1/202X[cite: 2]. Mandatory trigger: upon commitment, if confident in renewal, create next Fiscal Year renewal opportunity[cite: 1]...</p>
-                            <p class="font-sans font-bold text-[11px] text-black pt-1"># Tasks, Delegation & SLA</p>
-                            <p class="text-justify text-slate-700">Gift Officers update starred fields (*) in real time[cite: 2]. For unlogged tasks, portfolio managers must send tasks to Dev Associate at least once per week cc'ing Senior Dev Manager[cite: 2]...</p>
+
+                            <!-- Page 2 -->
+                            <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
+                                <div class="ml-3 space-y-0.5 text-slate-800 text-[11px]">
+                                    <p>Prospect – the prospect is still being researched, qualified, or cultivated, and an official ask has not been made</p>
+                                    <p>Cultivation - the Gift Officer is engaging the donor in preparation to make an ask</p>
+                                    <p>Solicitation – the Gift Officer has made an ask to the prospect</p>
+                                    <p>Committed – the prospect has made a pledge</p>
+                                    <p>Received – the payment has been received (in the off-chance the Opportunity Record has not been created first)</p>
+                                    <p>Declined – the prospect declined to make the gift</p>
+                                    <p>Withdrawn – the gift officer did not follow through with an ask, or the prospect made and rescinded a pledge</p>
+                                </div>
+                                <div class="ml-2 space-y-0.5 text-slate-800 font-sans font-medium text-[11px]">
+                                    <p>Low, Medium, and High projection amounts*</p>
+                                    <p>Solicitor</p>
+                                    <p>Fiscal Year</p>
+                                </div>
+                                <p class="text-justify text-slate-800">When an Opportunity has been committed, if a portfolio manager feels confident that the funder will renew or upgrade, a renewal Opportunity for the next Fiscal Year should be created. The respective Gift Officer should send the following details to the Development Associate (cc'ing Senior Development Manager) OR create their own Opportunity with the following information:</p>
+                                <div class="ml-2 space-y-0.5 text-slate-800 font-sans font-medium text-[11px]">
+                                    <p>Contact</p>
+                                    <p>• Account (Household or Company)</p>
+                                    <p>Campaign</p>
+                                    <p>Restriction (if applicable)</p>
+                                    <p>Stage*</p>
+                                    <div class="ml-3 space-y-0.5 font-normal">
+                                        <p>Prospect – the prospect is still being researched or qualified, and an official ask has not been made</p>
+                                        <p>Solicitation – the Gift Officer has made an ask to the prospect</p>
+                                        <p>Committed – the prospect has made a pledge</p>
+                                        <p>Received – the payment has been received (in the off-chance the Opportunity Record has not been created first)</p>
+                                        <p>Declined – the prospect declined to make the gift</p>
+                                        <p>Withdrawn - the gift officer did not follow through with an ask, or the prospect made and rescinded a pledge</p>
+                                    </div>
+                                    <p>Solicitor</p>
+                                    <p>Fiscal Year</p>
+                                    <p>• Low, Medium, and High projection amounts*</p>
+                                </div>
+                                <div class="text-right text-slate-400 font-mono text-[10px] pt-1">Page 2</div>
+                            </div>
+
+                            <!-- Page 3 -->
+                            <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
+                                <h4 class="font-sans font-bold text-xs text-black">Close date</h4>
+                                <div class="ml-2 space-y-1 text-slate-800">
+                                    <p>While the Opportunity is still in the Prospect stage, the close date can be the first date of the FY (9/1/202X) as a placeholder</p>
+                                    <p>When a gift goes through different stages to correspond with steps in the moves management process, the close date should be updated along with the stage. I.e. when it's time to enter renewal conversations and an Opportunity Stage goes from Prospect to Cultivation, the close date would be updated to reflect when renewal conversations began.</p>
+                                </div>
+                                <h4 class="font-sans font-bold text-xs text-black mt-2">Updating Opportunities</h4>
+                                <p class="text-justify text-slate-800">Once an Opportunity has been created, the Gift Officer should update fields above with an (*) for their respective Opportunities in real time OR email this information to the Development Associate asking Development Associate (cc'ing Senior Development Manager and Senior Director of Development) for updating. Updates for all other field updates should go through the Development Associate.</p>
+                                
+                                <h4 class="font-sans font-bold text-xs text-black mt-2">Tasks and Activities (Log a call, Email, etc)</h4>
+                                <p class="text-justify text-slate-800">Tasks and activities are an essential component of OppNet's moves management system, ensuring there is a living, dynamic plan to cultivate, solicit, and steward donors and prospective contributors. Tasks are also a means by which the department can accurately measure fundraising progress outside of dollars raised.</p>
+                                <ol class="list-decimal list-outside ml-4 space-y-1 text-slate-800">
+                                    <li>Tasks or Activities should be logged after any pertinent information about a prospect or a gift is gleaned, whether through a direct conversation with the prospect or through other means. Examples include:
+                                        <div class="ml-3 mt-0.5 space-y-0.5">
+                                            <p>a. After a meeting</p>
+                                            <p>b. After a phone or zoom call</p>
+                                            <p>c. Email conversation</p>
+                                            <p>d. Another staff member sends you information</p>
+                                        </div>
+                                    </li>
+                                    <li>Anytime a task that triggers another action is completed or cancelled, the gift officer is responsible for entering the new task or sending the information to Development Associate (cc'ing Senior Development Manager). If the new task or activity is not logged in real time, the portfolio manager should send the Development Associate their tasks at least once per week.</li>
+                                    <li>Tasks can be created either within or outside of Opportunities. When a task is intrinsically related to the cultivation, solicitation, or stewardship of a specific gift, it should be entered from within the Opportunity. When it is unrelated to a specific Opportunity, it should be created on the Contact page.</li>
+                                    <li>Tasks should be entered on the Contact or Opportunity through which the fundraising activity is focused. For example, if a gift officer sets up a task to speak with a board member (Jane Doe) to develop a solicitation strategy for a donor (John Smith), the task should be entered in the record of Mr. Smith and not Ms. Doe.</li>
+                                </ol>
+                                <div class="text-right text-slate-400 font-mono text-[10px] pt-1">Page 3</div>
+                            </div>
+
+                            <!-- Page 4 -->
+                            <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
+                                <ol class="list-decimal list-outside ml-4 space-y-1 text-slate-800" start="5">
+                                    <li>All tasks, reminders, and prospect activity should be entered directly into Salesforce and not maintained primarily in other management systems.</li>
+                                </ol>
+                                <div class="mt-3 pt-2 border-t border-slate-200">
+                                    <p class="text-slate-700">For information on creating a Task in Salesforce, Please visit Log Emails or Activities in Salesforce.docx in the folder C:\Users\user\Dropbox (OppNet)\OppNet Development\Documentation, Policies, and Procedures\How To Documentation - Salesforce</p>
+                                </div>
+                                <div class="text-right text-slate-400 font-mono text-[10px] pt-1">Page 4</div>
+                            </div>
                         </div>
 
-                        <!-- Doc 2: Apsona Unabridged -->
-                        <div id="doc-content-apsona" class="hidden bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-none">
-                            <div class="border-b border-slate-300 pb-2">
-                                <h3 class="font-bold text-sm font-sans">How To – Acknowledgements</h3>
-                                <p class="text-[10px] text-slate-500 font-sans">Apsona Document Merge Procedures</p>
+                        <!-- Doc 2: Apsona & Acknowledgements (Full Unedited Text) -->
+                        <div id="doc-content-apsona" class="hidden bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-4 select-text border border-slate-300">
+                            <div>
+                                <h3 class="font-bold text-sm font-sans text-black">How To – Acknowledgements</h3>
+                                <p class="text-slate-600 font-sans text-[11px] italic">For an overview of Apsona Document merge click here</p>
                             </div>
-                            <p class="font-sans font-bold text-[11px] text-black"># Tax Language Removal Mandate</p>
-                            <p class="text-justify text-slate-700 bg-amber-50 p-2 border-l-2 border-amber-400">If a gift comes through a 3rd party processor (Benevity, Cybergrants, Amazon Smile) OR a Donor Advised Fund (Fidelity, Goldman Sachs Gives), remove the tax language at the bottom of the letter[cite: 3].</p>
-                            <p class="font-sans font-bold text-[11px] text-black pt-1"># In-Kind Tax Statement</p>
-                            <p class="text-justify text-slate-700 font-mono text-[10px]">The Opportunity Network is a 501(c)3 organization. Our tax ID number is 43-1984494. No goods or services were provided in exchange for your in-kind contribution[cite: 3].</p>
+                            
+                            <div>
+                                <h4 class="font-sans font-bold text-xs text-black">Set up templates in Apsona</h4>
+                                <ol class="list-decimal ml-4 space-y-1 text-slate-800">
+                                    <li>Ensure your Word template has the correct fields formatted as merge fields. You will map these later, so the names of the fields do not have to match your source document.</li>
+                                    <li>In Apsona, go to “Documents”</li>
+                                    <li>Click “Upload”</li>
+                                    <li>Select and name your doc, and save your template to the “Acknowledgements” Folder</li>
+                                    <li>If you make any changes to your template in Word, replace the template in Apsona</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h4 class="font-sans font-bold text-xs text-black">Run an Existing Acknowledgement Process</h4>
+                                <ol class="list-decimal ml-4 space-y-1 text-slate-800">
+                                    <li>In Apsona, go to Reporting Tools >> Multi-step reports</li>
+                                    <li>Click go to the “Acknowledgements” folder</li>
+                                    <li>Click on “Acknowledgment Report” >> Run</li>
+                                    <li>The report pulls all paid payments with a status of “Acknowledgement sent for installment = no”</li>
+                                    <li>Look at all the campaigns in the report to ensure you have an acknowledgement template to accommodate each gift.</li>
+                                    <li>Go back to the “Acknowledgements” folder</li>
+                                    <li>For each set of letters that you need to run, click on the corresponding report. E.g. if you are pulling “General Operating” letters, click on the “General Operating” report</li>
+                                    <li>After you run the report, click on “Merge/Mail”</li>
+                                    <li>Click “Run an existing merge action”</li>
+                                    <li>Select the merge action that corresponds to the report. e.g if you are pulling “General Operating” letters, click on the “General Operating” merge action</li>
+                                    <li>Click “save and run,” and when the merge completes, download your results.</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h4 class="font-sans font-bold text-xs text-black">Create a New Acknowledgement Process</h4>
+                                <ol class="list-decimal ml-4 space-y-1 text-slate-800">
+                                    <li>Create a new report with the correct parameters. Most likely, you will be using the “Campaign” as your parameter, so clone an existing Acknowledgement Report, and in payment step’s filter terms, deselect the existing campaign(s) in the “Opportunity Campaign” filters and select the campaign(s) that corresponds to the acknowledgement you are creating.</li>
+                                    <li>Click “Save and Run”</li>
+                                    <li>CHECK your report to make sure it’s accurate!</li>
+                                    <li>Click “Merge/mail”</li>
+                                    <li>Select the bubble for “Create a new merge action”</li>
+                                    <li>Select the type of doc (for acks, will be word docs)</li>
+                                    <li>Click “next”</li>
+                                    <li>Select your template from Salesforce Documents</li>
+                                    <li>Select “Single file with page breaks”</li>
+                                    <li>Click “next”</li>
+                                    <li>In “match fields,” map your merge fields in the template to your report fields in Apsona.</li>
+                                    <li>Under “set the field,” set the “acknowledgment sent for installment” field as “pending.” This is so you’ll know that after you’ve run the merge process, the letter is being worked on</li>
+                                    <li>Click “Save and Run”</li>
+                                    <li>Download results</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h4 class="font-sans font-bold text-xs text-black">Editing/updating letters:</h4>
+                                <ul class="list-disc ml-4 space-y-1.5 text-slate-800">
+                                    <li>ALWAYS proof your letters, even if your merge fields seem perfect!</li>
+                                    <li>If a gift comes through a 3rd party processor (Benevity, Amazon Smile, Cybergrants, etc.) OR a Donor Advised Fund (Fidelity Charitable, Goldman Sachs Gives, etc.) remove the tax language at the bottom of the letter.</li>
+                                    <li>If a portfolio/board member donates through one of these channels, it is often best to craft a warm thank you note for the portfolio manager to have the PM customize and email – donors appreciate this much more than a formal letter*!<br><span class="italic text-slate-600">*except sometimes around tax time donors forget through which mechanism they donated and will ask for a formal letter, which we will create but leave off tax language. It’s all a balance</span></li>
+                                    <li>If a donor has a strong relationship with OppNet, feel free to customize the language to fit the relationship.</li>
+                                    <li>In-kind gifts should reference the item(s) donated and use the following tax language:<br>
+                                        <span class="font-mono text-[10.5px] bg-slate-100 p-2 block mt-1 border border-slate-200 text-slate-900">The Opportunity Network is a 501(c)3 organization. Our tax ID number is 43-1984494. No goods or services were provided in exchange for your in-kind contribution. Please consult your tax advisor regarding the deductibility of this contribution.</span>
+                                    </li>
+                                    <li>Once you are done editing the letters, send to Senior Development Manager for review.</li>
+                                    <li>For Individual and Corporate acks: once you receive edits and they are incorporated, save the letters as PDFs in the appropriate folder (will follow the below naming schemes; adjust FY):<br>
+                                        • Individual and Corporate: C:\Users\user\Dropbox (OppNet)\OppNet Development\Funders\Individual\Acknowledgment Letters\FY22\Sent<br>
+                                        • Gala: C:\Users\user\Dropbox (OppNet)\OppNet Special Events\Annual Event\Dinner 2022\Acknowledgements
+                                    </li>
+                                    <li>Send the acknowledgement via the giving@oppnet email (special events with a cover note such as the below):<br>
+                                        <div class="font-mono text-[10px] bg-slate-50 p-2.5 border border-slate-200 mt-1 whitespace-pre-wrap text-slate-800">Dear NAME,
+
+I hope this finds you healthy and well. I wanted to be in touch today to thank you for GIC's donation to OppNet and send the attached acknowledgement letter for your support. Your [renewed] investment in our work and our students is so appreciated.
+
+While we continue working remotely here at OppNet, we are sending our acknowledgement letters via email. If you would prefer to receive a hard copy, please let me know and we would be happy to send one to you in the mail.
+
+Thank you again for your support of our students!
+
+Best,
+Signature</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="font-sans font-bold text-xs text-black">Institutional Letters:</h4>
+                                <ul class="list-disc ml-4 space-y-1 text-slate-800">
+                                    <li>Letters for funders managed by the Institutional Team are often quite nuanced. Essentially, O & E gets the template started, and then the Institutional Team edits and sends. Please reference what the grant is funding per the grant agreement.</li>
+                                    <li>Once you’ve edited the letter and it’s been reviewed, send to point person on institutional team (as of 3/11/21 it is Jonelle Carrera). They will save them in the correct folder</li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Doc 3: Lead Scribe Unabridged -->
-                        <div id="doc-content-gifts" class="hidden bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-none">
-                            <div class="border-b border-slate-300 pb-2">
-                                <h3 class="font-bold text-sm font-sans">Convert a Lead and Process a Salesforce Donation</h3>
-                                <p class="text-[10px] text-slate-500 font-sans">16 Pages • 31 Individual Click Steps</p>
+                        <!-- Doc 3: Lead Scribe (All 31 Steps Verbatim) -->
+                        <div id="doc-content-gifts" class="hidden bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
+                            <div>
+                                <h3 class="font-bold text-sm font-sans text-black">Convert a Lead and Process a Salesforce Donation</h3>
+                                <p class="text-[10px] text-slate-600 font-sans">Made with Scribe (16 Pages • 31 Action Steps)</p>
                             </div>
-                            <p class="text-justify text-slate-700">1. Click Search... 2. Type leads... 3. Click All Open Leads... 4. Find Lead... 5. Click Converted... 6. If New Contact: Create New Organization (Household). If Existing Contact: Choose Existing Organization & search Household... 7. Verify Opportunity fields (Individual Donation, Purpose: General, Restriction: Unrestricted)...</p>
+                            
+                            <div class="space-y-1.5 text-slate-800">
+                                <p><strong>1.</strong> Click "Search..."</p>
+                                <p><strong>2.</strong> Type "leads"</p>
+                                <p><strong>3.</strong> Click "All Open Leads (DO NOT USE)"</p>
+                                <p><strong>4.</strong> Look for the Lead record for the donor who made the recent gift</p>
+                                <p><strong>5.</strong> Click "Converted"</p>
+                                <p><strong>6.</strong> Click "Select Converted Lead (DO NOT USE) Status"</p>
+                                <p><strong>7.</strong> If the contact is new, you'll create a new organization by making the organization name the household name and clicking the "household" record type</p>
+                                <p><strong>8.</strong> If the contact is not new, choose an existing organization and search for their household record.</p>
+                                <p><strong>9.</strong> Type household name in search...</p>
+                                <p><strong>10.</strong> Select organization results...</p>
+                                <p><strong>11.</strong> If the contact is new, click "Create New." If not, click "choose existing" and search for the contact record of the donor.</p>
+                                <p><strong>12.</strong> Click Contact Search...</p>
+                                <p><strong>13.</strong> Select Contact from search matches...</p>
+                                <p><strong>14.</strong> Click "Convert." Let the system create a new Opportunity.</p>
+                                <p><strong>15.</strong> Click on the Opportunity Record to finish processing the gift.</p>
+                                <p><strong>16.</strong> If the Opportunity fulfills a pledge or the payment is an installment of another Opportunity, link the payment to the appropriate Opportunity (as you would with a Linvio payment) and then delete the autogenerated Opportunity. If the Opportunity is truly new, update required fields as you normally would when processing a gift. Notice that Campaign is filled in for you already!</p>
+                                <p><strong>17.</strong> Open Referrer and Solicitor fields...</p>
+                                <p><strong>18.</strong> Click "New Opportunity or Renewal" dropdown</p>
+                                <p><strong>19.</strong> Click "Renewal"</p>
+                                <p><strong>20.</strong> Click "Private Individual"</p>
+                                <p><strong>21.</strong> Click "Private Individual" under Hard Payment Entity Type</p>
+                                <p><strong>22.</strong> Click "--None--" for Soft Payment Entity Type</p>
+                                <p><strong>23.</strong> Set Restriction Type...</p>
+                                <p><strong>24.</strong> Click "Donation"</p>
+                                <p><strong>25.</strong> Click "Unrestricted"</p>
+                                <p><strong>26.</strong> Click "General" under Purpose/Program</p>
+                                <p><strong>27.</strong> Click "Save"</p>
+                                <p><strong>28.</strong> Click on payments to see if any other information came in that needs to be updated</p>
+                                <p><strong>29.</strong> Update the preferred listing name!</p>
+                                <p><strong>30.</strong> Review final Opportunity and Payment transmittal details...</p>
+                                <p><strong>31.</strong> Click "Save"</p>
+                            </div>
                         </div>
 
-                        <!-- Doc 4: Merge Unabridged -->
-                        <div id="doc-content-merge" class="hidden bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-none">
-                            <div class="border-b border-slate-300 pb-2">
-                                <h3 class="font-bold text-sm font-sans">How To - Merge a Contact</h3>
-                                <p class="text-[10px] text-slate-500 font-sans">Salesforce Deduplication SOP</p>
+                        <!-- Doc 4: Merge (Full Unedited Text) -->
+                        <div id="doc-content-merge" class="hidden bg-white text-slate-900 p-6 sm:p-8 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
+                            <div>
+                                <h3 class="font-bold text-sm font-sans text-black">OppNet - How To - Merge a Contact</h3>
+                                <p class="text-[10px] text-slate-600 font-sans">Contact Deduplication Standard Operating Procedures</p>
                             </div>
-                            <p class="text-justify text-slate-700">Decide which record is the Master Record (the one with the richest and most recent data)[cite: 4]. Select blue radio buttons for fields to retain[cite: 4]. Merge warning: source record moves into the Recycle Bin if restoration is ever needed[cite: 4].</p>
+                            
+                            <ol class="list-decimal ml-4 space-y-2 text-slate-800">
+                                <li>In App Launcher, search for “contact merge”</li>
+                                <li>Click “search contacts”</li>
+                                <li>Enter your contact’s name</li>
+                                <li>Check up to 3 record to be merged</li>
+                                <li>Click “Next”</li>
+                                <li>Decide which record you want to be the Master Record - this should be the record with the richest and most recent data</li>
+                                <li>Go through the list of fields that have blue and empty circles next to them and select the data you want to retain<br>
+                                    <span class="italic text-slate-700">*In this example, Jonelle will replace Katherine as the Contact Owner*</span><br>
+                                    <span class="italic text-slate-700">*If the data from the source record is selected, it will come over and replace the data from the master record</span>
+                                </li>
+                                <li>Click merge</li>
+                                <li>You will receive a message that merging is an irreversible process*; click merge<br>
+                                    <span class="italic text-slate-700">*The source contact will go into the recycle bin, and you can reinstate them if you need to</span>
+                                </li>
+                                <li>You’ll be directed to your newly-merged record!</li>
+                            </ol>
                         </div>
 
                     </div>
@@ -280,8 +516,8 @@
                                 </div>
                                 <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2 text-xs">
                                     <span id="m-title" class="text-sm font-bold text-white uppercase block">Prospect Stage</span>
-                                    <p id="m-desc" class="text-slate-300">The prospect is being researched/cultivated; no formal ask has been made yet[cite: 1].</p>
-                                    <p id="m-rule" class="text-slate-400 pt-2 border-t border-slate-800 text-[11px] font-mono">Close Date: Use first date of FY (9/1/202X) as placeholder[cite: 2].</p>
+                                    <p id="m-desc" class="text-slate-300">The prospect is being researched/cultivated; no formal ask has been made yet.</p>
+                                    <p id="m-rule" class="text-slate-400 pt-2 border-t border-slate-800 text-[11px] font-mono">Close Date: Use first date of FY (9/1/202X) as placeholder.</p>
                                 </div>
                             </div>
 
@@ -292,7 +528,7 @@
                                 </div>
                                 <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs font-mono space-y-1 text-slate-300">
                                     <div class="flex justify-between text-slate-500 border-b border-slate-800 pb-1 text-[11px]">
-                                        <span>To: Dev Associate (CC: SDM & Director)[cite: 1, 2]</span>
+                                        <span>To: Dev Associate (CC: SDM & Director)</span>
                                         <span class="text-amber-400">1-Click Ready</span>
                                     </div>
                                     <p class="pt-1">Hi Operations Team,<br>Could you please update <strong>John Smith Contact Record</strong> with: Update phone & add board affiliation.<br>Thank you!</p>
@@ -320,8 +556,8 @@
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2 text-xs">
                                 <span class="font-bold text-amber-400 uppercase tracking-wider block">Lead Conversion & Household Rule</span>
                                 <p class="text-slate-300 leading-relaxed">
-                                    • New Contact $\rightarrow$ Create New Organization with Record Type = <strong>Household</strong>.<br>
-                                    • Existing Contact $\rightarrow$ Choose Existing Organization & search their active Household.
+                                    • New Contact → Create New Organization with Record Type = <strong>Household</strong>.<br>
+                                    • Existing Contact → Choose Existing Organization & search their active Household.
                                 </p>
                             </div>
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 grid grid-cols-2 gap-2 text-xs font-mono text-slate-300">
@@ -337,14 +573,14 @@
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-2 text-xs font-mono">
                                 <span class="text-white font-bold block text-[11px] font-sans">Contact Owner Conflict</span>
                                 <div class="grid grid-cols-2 gap-2">
-                                    <button onclick="setMergeOwner('Katherine (Former)', 'm')" id="m-owner-m" class="p-2 rounded border border-slate-700 bg-slate-800 text-slate-400 text-left truncate">○ Katherine (Former)[cite: 4]</button>
-                                    <button onclick="setMergeOwner('Jonelle Carrera (Current)', 'd')" id="m-owner-d" class="p-2 rounded border border-amber-500/50 bg-amber-950 text-amber-300 text-left font-bold truncate">● Jonelle (Current)[cite: 4]</button>
+                                    <button onclick="setMergeOwner('Katherine (Former)', 'm')" id="m-owner-m" class="p-2 rounded border border-slate-700 bg-slate-800 text-slate-400 text-left truncate">○ Katherine (Former)</button>
+                                    <button onclick="setMergeOwner('Jonelle Carrera (Current)', 'd')" id="m-owner-d" class="p-2 rounded border border-amber-500/50 bg-amber-950 text-amber-300 text-left font-bold truncate">● Jonelle (Current)</button>
                                 </div>
                             </div>
                             <div class="bg-slate-950 border border-amber-500/30 rounded-xl p-3 text-xs space-y-1">
                                 <span class="text-amber-400 font-bold uppercase tracking-wider text-[10px] block">Live Output Preview</span>
-                                <p class="font-mono text-slate-300">Final Owner: <strong id="preview-owner-name" class="text-amber-300">Jonelle Carrera (Current)[cite: 4]</strong></p>
-                                <p class="text-slate-500 text-[10px]">Source record moved safely into Recycle Bin[cite: 4].</p>
+                                <p class="font-mono text-slate-300">Final Owner: <strong id="preview-owner-name" class="text-amber-300">Jonelle Carrera (Current)</strong></p>
+                                <p class="text-slate-500 text-[10px]">Source record moved safely into Recycle Bin.</p>
                             </div>
                         </div>
 
