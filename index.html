@@ -13,9 +13,9 @@
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         .font-serif-doc { font-family: 'Playfair Display', Georgia, serif; }
         .glass-panel {
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.18);
         }
         .glass-amber-glow {
             box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.12);
@@ -203,11 +203,10 @@
                         <span id="doc-name-tag" class="text-slate-500">Tracking Moves Management in Salesforce.docx.pdf</span>
                     </div>
 
-                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 flex-1 overflow-y-auto max-h-[640px] space-y-6 paper-shadow">
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 flex-1 overflow-y-auto max-h-[720px] space-y-6 paper-shadow">
                         
                         <!-- Doc 1: Moves Management (Full Text Across All 4 Pages) -->
                         <div id="doc-content-moves" class="space-y-4">
-                            <!-- Page 1 -->
                             <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
                                 <div>
                                     <h3 class="font-bold text-sm font-sans text-black">Moves Management for Leadership and Annual Giving</h3>
@@ -245,7 +244,6 @@
                                 </div>
                             </div>
 
-                            <!-- Page 2 -->
                             <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
                                 <div class="ml-3 space-y-0.5 text-slate-800 text-[11px]">
                                     <p>Prospect – the prospect is still being researched, qualified, or cultivated, and an official ask has not been made</p>
@@ -283,7 +281,6 @@
                                 <div class="text-right text-slate-400 font-mono text-[10px] pt-1">Page 2</div>
                             </div>
 
-                            <!-- Page 3 -->
                             <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
                                 <h4 class="font-sans font-bold text-xs text-black">Close date</h4>
                                 <div class="ml-2 space-y-1 text-slate-800">
@@ -311,7 +308,6 @@
                                 <div class="text-right text-slate-400 font-mono text-[10px] pt-1">Page 3</div>
                             </div>
 
-                            <!-- Page 4 -->
                             <div class="bg-white text-slate-900 p-6 rounded text-xs font-serif-doc leading-relaxed space-y-3 select-text border border-slate-300">
                                 <ol class="list-decimal list-outside ml-4 space-y-1 text-slate-800" start="5">
                                     <li>All tasks, reminders, and prospect activity should be entered directly into Salesforce and not maintained primarily in other management systems.</li>
@@ -488,106 +484,288 @@ Signature</div>
                     </div>
                 </div>
 
-                <!-- Right Pane: Interactive Decanted App -->
+                <!-- Right Pane: Interactive Decanted App (FULL RESTORED POWER) -->
                 <div class="lg:col-span-7 flex flex-col space-y-2">
                     <div class="flex items-center justify-between text-xs font-mono px-1">
                         <span class="text-amber-400 font-bold flex items-center gap-1.5">
                             <span class="w-2 h-2 rounded-full bg-amber-400"></span>
                             Decanted Internal App
                         </span>
-                        <span class="text-slate-400">Clarity: 100% Signal</span>
+                        <span id="active-app-tag" class="text-slate-400 font-mono">Module 1: Moves Management</span>
                     </div>
 
-                    <div class="glass-panel rounded-2xl p-6 flex-1 flex flex-col justify-between space-y-5 glass-amber-glow min-h-[560px]">
+                    <div class="glass-panel rounded-2xl p-6 flex-1 flex flex-col justify-between space-y-5 glass-amber-glow min-h-[720px] overflow-y-auto">
                         
-                        <!-- APP 1: MOVES MANAGEMENT INTERACTION -->
-                        <div id="app-pane-moves" class="space-y-4">
+                        <!-- APP 1: MOVES MANAGEMENT (FULL 3 TABS + 7 STAGES + PRE-WRITTEN EMAIL) -->
+                        <div id="app-pane-moves" class="space-y-5">
                             <div class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-medium">
-                                <button onclick="tabMoves('stages')" id="tm-btn-stages" class="flex-1 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold transition">1. Stage Navigator</button>
-                                <button onclick="tabMoves('email')" id="tm-btn-email" class="flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition">2. Pre-Written Email</button>
+                                <button onclick="tabMoves('gov')" id="tm-btn-gov" class="flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition">1. Roles & Reviews</button>
+                                <button onclick="tabMoves('stages')" id="tm-btn-stages" class="flex-1 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold transition">2. 7-Stage Navigator</button>
+                                <button onclick="tabMoves('email')" id="tm-btn-email" class="flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition">3. Delegation & Email</button>
                             </div>
 
-                            <div id="tm-view-stages" class="space-y-3">
-                                <div class="grid grid-cols-4 gap-1.5 text-xs">
-                                    <button onclick="setMoveStage('Prospect')" id="m-btn-Prospect" class="p-2 rounded bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold truncate">Prospect</button>
-                                    <button onclick="setMoveStage('Cultivation')" id="m-btn-Cultivation" class="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300 truncate">Cultivation</button>
-                                    <button onclick="setMoveStage('Solicitation')" id="m-btn-Solicitation" class="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300 truncate">Solicitation</button>
-                                    <button onclick="setMoveStage('Committed')" id="m-btn-Committed" class="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300 truncate">Committed</button>
+                            <!-- Sub-tab 1: Governance -->
+                            <div id="tm-view-gov" class="hidden space-y-4">
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                                    <span class="text-xs font-bold text-white uppercase tracking-wider block">Account Ownership Policy</span>
+                                    <p class="text-sm text-slate-200"><strong class="text-amber-400">Only frontline fundraising staff</strong> manage portfolios and own accounts in Salesforce. Board members & leadership support asks but are never listed as owners.</p>
                                 </div>
-                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2 text-xs">
-                                    <span id="m-title" class="text-sm font-bold text-white uppercase block">Prospect Stage</span>
-                                    <p id="m-desc" class="text-slate-300">The prospect is being researched/cultivated; no formal ask has been made yet.</p>
-                                    <p id="m-rule" class="text-slate-400 pt-2 border-t border-slate-800 text-[11px] font-mono">Close Date: Use first date of FY (9/1/202X) as placeholder.</p>
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                                    <span class="text-xs font-bold text-white uppercase tracking-wider block">Quarterly Check-In Goals (Every 3 Months)</span>
+                                    <ul class="text-xs space-y-1.5 text-slate-300">
+                                        <li>• Reassign accounts to new owners whenever appropriate.</li>
+                                        <li>• Verify all Opportunity Stages are accurate.</li>
+                                        <li>• Rebalance portfolio sizes with unassigned prospects.</li>
+                                    </ul>
                                 </div>
                             </div>
 
-                            <div id="tm-view-email" class="hidden space-y-3">
-                                <div class="grid grid-cols-2 gap-2 text-xs">
-                                    <input type="text" id="moves-input-donor" value="John Smith Contact Record" class="bg-slate-950 border border-slate-800 rounded-lg p-2 text-white focus:outline-none focus:border-amber-500">
-                                    <input type="text" id="moves-input-fields" value="Update phone & add board affiliation" class="bg-slate-950 border border-slate-800 rounded-lg p-2 text-white focus:outline-none focus:border-amber-500">
-                                </div>
-                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs font-mono space-y-1 text-slate-300">
-                                    <div class="flex justify-between text-slate-500 border-b border-slate-800 pb-1 text-[11px]">
-                                        <span>To: Dev Associate (CC: SDM & Director)</span>
-                                        <span class="text-amber-400">1-Click Ready</span>
+                            <!-- Sub-tab 2: Complete 7-Stage Pipeline Navigator -->
+                            <div id="tm-view-stages" class="space-y-4">
+                                <div class="space-y-1.5">
+                                    <div class="grid grid-cols-5 gap-1 text-xs">
+                                        <button onclick="setMoveStage('Prospect')" id="m-btn-Prospect" class="p-1.5 rounded-lg bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold truncate">1. Prospect</button>
+                                        <button onclick="setMoveStage('Cultivation')" id="m-btn-Cultivation" class="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 truncate">2. Cultivation</button>
+                                        <button onclick="setMoveStage('Solicitation')" id="m-btn-Solicitation" class="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 truncate">3. Solicitation</button>
+                                        <button onclick="setMoveStage('Committed')" id="m-btn-Committed" class="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 truncate">4. Committed</button>
+                                        <button onclick="setMoveStage('Received')" id="m-btn-Received" class="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 truncate">5. Received</button>
                                     </div>
-                                    <p class="pt-1">Hi Operations Team,<br>Could you please update <strong>John Smith Contact Record</strong> with: Update phone & add board affiliation.<br>Thank you!</p>
+                                    <div class="grid grid-cols-2 gap-1.5 text-xs">
+                                        <button onclick="setMoveStage('Declined')" id="m-btn-Declined" class="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-rose-300 truncate">6. Declined</button>
+                                        <button onclick="setMoveStage('Withdrawn')" id="m-btn-Withdrawn" class="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-amber-300 truncate">7. Withdrawn</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5 text-xs">
+                                    <div class="flex items-center justify-between">
+                                        <span id="m-stage-title" class="text-sm font-bold text-white uppercase block">Prospect Stage</span>
+                                        <span id="m-stage-badge" class="text-[10px] px-2 py-0.5 rounded border font-mono bg-amber-500/10 text-amber-400 border-amber-500/20">Stage Active</span>
+                                    </div>
+                                    <div>
+                                        <label class="text-[10px] uppercase tracking-wider text-slate-500 font-bold block mb-0.5">What this stage means</label>
+                                        <p id="m-stage-def" class="text-slate-300">The prospect is still being researched, qualified, or cultivated, and an official ask has not been made yet.</p>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-800 text-slate-300">
+                                        <div>
+                                            <label class="text-[10px] uppercase tracking-wider text-slate-500 font-bold block mb-0.5">Close Date Rule</label>
+                                            <p id="m-stage-rule" class="text-slate-300">Use first date of FY (9/1/202X) as placeholder.</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-[10px] uppercase tracking-wider text-slate-500 font-bold block mb-0.5">Procedural Trigger</label>
+                                            <p id="m-stage-trigger" class="text-slate-300">Review quarterly with Dev Operations staff.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sub-tab 3: Delegation & Restored Pre-Written Email Creator -->
+                            <div id="tm-view-email" class="hidden space-y-4">
+                                <div class="grid grid-cols-2 gap-3 text-xs">
+                                    <div class="bg-slate-950 p-3 rounded-xl border border-amber-500/30">
+                                        <strong class="text-amber-400 block mb-1">Direct Updates (*)</strong>
+                                        <p class="text-slate-300">• Opportunity Stage (*)<br>• Projections (*)</p>
+                                    </div>
+                                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-700">
+                                        <strong class="text-slate-300 block mb-1">Delegate to Ops</strong>
+                                        <p class="text-slate-400">• Contact info & Address<br>• Account & Campaigns</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-3">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xs font-bold text-white uppercase tracking-wider">Create Pre-Written Email</span>
+                                        <span class="text-[10px] text-slate-400">CC: Senior Dev Manager & Director</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <input type="text" id="delegation-record" placeholder="Record Name (e.g. John Smith)" class="bg-slate-900 border border-slate-800 rounded-lg p-2 text-xs text-white focus:outline-none focus:border-amber-500">
+                                        <input type="text" id="delegation-fields" placeholder="Fields to update (e.g. New Title & Phone)" class="bg-slate-900 border border-slate-800 rounded-lg p-2 text-xs text-white focus:outline-none focus:border-amber-500">
+                                    </div>
+                                    <button onclick="generateDelegationEmail()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2 rounded-lg text-xs transition shadow-sm">
+                                        Generate Pre-Formatted Email
+                                    </button>
+                                    <div id="email-preview-card" class="hidden bg-slate-900 p-3 rounded-lg border border-slate-800 text-xs space-y-2 font-mono">
+                                        <div class="flex justify-between items-center text-slate-400 border-b border-slate-800 pb-1.5">
+                                            <span class="truncate">To: Development Associate (CC: SDM & Director)</span>
+                                            <button onclick="copyGeneratedEmail()" id="copy-btn" class="text-amber-400 hover:underline flex-shrink-0 ml-2">Copy Text</button>
+                                        </div>
+                                        <p id="preview-body" class="text-slate-300 whitespace-pre-wrap"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- APP 2: APSONA & ACKNOWLEDGEMENTS INTERACTION -->
-                        <div id="app-pane-apsona" class="hidden space-y-4">
+                        <!-- APP 2: APSONA & ACKNOWLEDGEMENTS (MERGE RAILS + TAX RULES + EMAIL) -->
+                        <div id="app-pane-apsona" class="hidden space-y-5">
+                            <div class="border-b border-slate-800 pb-3">
+                                <h3 class="text-base font-bold text-white">Apsona Document Merge & Acknowledgements</h3>
+                                <p class="text-xs text-slate-400">Step-by-step merge flows, tax language rules, and cover email templates.</p>
+                            </div>
+
+                            <!-- Tax Language Matrix Tool -->
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-3">
-                                <span class="text-xs font-bold text-white uppercase tracking-wider block">Tax Language Decision Matrix</span>
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block">Tax Language Decision Rule</span>
                                 <div class="grid grid-cols-3 gap-2 text-xs">
-                                    <button onclick="setTax('direct')" id="tax-btn-direct" class="p-2 rounded bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold">Direct Gift</button>
-                                    <button onclick="setTax('daf')" id="tax-btn-daf" class="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">DAF / 3rd-Party</button>
-                                    <button onclick="setTax('inkind')" id="tax-btn-inkind" class="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">In-Kind</button>
+                                    <button onclick="setTax('direct')" id="tax-btn-direct" class="p-2 rounded-lg bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold">Direct Gift</button>
+                                    <button onclick="setTax('daf')" id="tax-btn-daf" class="p-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">DAF / 3rd-Party</button>
+                                    <button onclick="setTax('inkind')" id="tax-btn-inkind" class="p-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">In-Kind</button>
                                 </div>
-                                <div id="tax-text" class="bg-slate-900 p-3 rounded-lg text-xs text-slate-200 border border-slate-800 leading-relaxed">
+                                <div id="tax-text" class="bg-slate-900 p-3 rounded-lg text-xs text-slate-200 leading-relaxed border border-slate-800">
                                     Standard 501(c)(3) tax deductible wording included on letter.
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- APP 3: DONATION PROCESSING INTERACTION -->
-                        <div id="app-pane-gifts" class="hidden space-y-3">
-                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2 text-xs">
-                                <span class="font-bold text-amber-400 uppercase tracking-wider block">Lead Conversion & Household Rule</span>
-                                <p class="text-slate-300 leading-relaxed">
-                                    • New Contact → Create New Organization with Record Type = <strong>Household</strong>.<br>
-                                    • Existing Contact → Choose Existing Organization & search their active Household.
+                            <!-- 1-Click Ack Email Draft -->
+                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-bold text-white uppercase tracking-wider">Email Cover Note Template</span>
+                                    <button onclick="copyAckEmail()" id="ack-copy-btn" class="text-xs text-amber-400 hover:underline">Copy Template</button>
+                                </div>
+                                <p id="ack-email-text" class="text-xs text-slate-300 font-mono bg-slate-900 p-3 rounded border border-slate-800 leading-relaxed">
+Dear [Donor Name],&#10;&#10;I hope this finds you healthy and well. I wanted to be in touch today to thank you for your support of OppNet and share your attached acknowledgement letter.&#10;&#10;While we continue working remotely, we are sending acknowledgement letters via email. If you prefer a hard copy, please let us know!&#10;&#10;Best,&#10;The Opportunity Network
                                 </p>
                             </div>
-                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 grid grid-cols-2 gap-2 text-xs font-mono text-slate-300">
-                                <span>✓ Record Type: Individual</span>
-                                <span>✓ Restriction: Unrestricted</span>
-                                <span>✓ Purpose: General</span>
-                                <span>✓ Preferred Listing Name</span>
+                        </div>
+
+                        <!-- APP 3: DONATION PROCESSING (SCRIBE TRANSLATION TO 3 STEPS) -->
+                        <div id="app-pane-gifts" class="hidden space-y-5">
+                            <div class="border-b border-slate-800 pb-3">
+                                <h3 class="text-base font-bold text-white">Lead Conversion & Gift Intake Helper</h3>
+                                <p class="text-xs text-slate-400">Streamlining the 16-page Scribe workflow into 3 key operational steps.</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                                    <div class="flex items-center gap-2 text-xs font-bold text-amber-400">
+                                        <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center">1</span>
+                                        Convert Lead & Match Household
+                                    </div>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        • If New Contact → Create New Organization with Record Type = <strong>Household</strong>.<br>
+                                        • If Existing Contact → Choose Existing Organization & search for their existing Household.
+                                    </p>
+                                </div>
+
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                                    <div class="flex items-center gap-2 text-xs font-bold text-amber-400">
+                                        <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center">2</span>
+                                        Pledge Check & Deduplication
+                                    </div>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        If this donation fulfills an existing pledge installment, link payment to that Opportunity and delete the autogenerated record.
+                                    </p>
+                                </div>
+
+                                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                                    <div class="flex items-center gap-2 text-xs font-bold text-amber-400">
+                                        <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center">3</span>
+                                        Mandatory Opportunity Fields Checklist
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 font-mono">
+                                        <span>✓ Record Type: Individual</span>
+                                        <span>✓ Restriction: Unrestricted</span>
+                                        <span>✓ Purpose: General</span>
+                                        <span>✓ Preferred Listing Name</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- APP 4: CONTACT MERGE LIVE CALCULATOR -->
-                        <div id="app-pane-merge" class="hidden space-y-3">
-                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-2 text-xs font-mono">
-                                <span class="text-white font-bold block text-[11px] font-sans">Contact Owner Conflict</span>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <button onclick="setMergeOwner('Katherine (Former)', 'm')" id="m-owner-m" class="p-2 rounded border border-slate-700 bg-slate-800 text-slate-400 text-left truncate">○ Katherine (Former)</button>
-                                    <button onclick="setMergeOwner('Jonelle Carrera (Current)', 'd')" id="m-owner-d" class="p-2 rounded border border-amber-500/50 bg-amber-950 text-amber-300 text-left font-bold truncate">● Jonelle (Current)</button>
+                        <!-- APP 4: CONTACT MERGE (FULL LIVE CALCULATOR SANDBOX) -->
+                        <div id="app-pane-merge" class="hidden space-y-5">
+                            <div class="border-b border-slate-800 pb-3">
+                                <h3 class="text-base font-bold text-white">Contact Deduplication & Live Merge Calculator</h3>
+                                <p class="text-xs text-slate-400">Select which data points to keep from each record and preview the final merged contact live.</p>
+                            </div>
+
+                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block">Golden Rule for Master Records</span>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Always designate the record with the <strong class="text-amber-400">richest and most recent activity</strong> as the Master Record.
+                                </p>
+                            </div>
+
+                            <!-- Interactive Field Selector Sandbox -->
+                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-white uppercase tracking-wider">Step 1: Choose Fields to Retain</span>
+                                    <span class="text-[10px] text-slate-400 font-mono">Rule: Keep richest & most recent data</span>
+                                </div>
+                                
+                                <div class="space-y-2 text-xs font-mono">
+                                    <!-- Owner Field Row -->
+                                    <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-800 space-y-1.5">
+                                        <div class="flex justify-between text-[11px] font-sans">
+                                            <span class="font-semibold text-slate-300">Contact Owner</span>
+                                            <span class="text-slate-500 text-[10px]">Target: Assign current staff</span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <button onclick="setMergeField('owner', 'Katherine (Former)', 'master')" id="owner-opt-master" class="p-2 rounded border border-slate-700 bg-slate-800/80 text-slate-400 text-left transition hover:bg-slate-700 truncate">
+                                                ○ Record A: Katherine <span class="text-[10px] text-slate-500">(Former)</span>
+                                            </button>
+                                            <button onclick="setMergeField('owner', 'Jonelle Carrera', 'duplicate')" id="owner-opt-duplicate" class="p-2 rounded border border-amber-500/50 bg-amber-950/60 text-amber-300 text-left transition truncate">
+                                                ● Record B: Jonelle Carrera <span class="text-[10px] text-amber-400 font-semibold">(Current Owner)</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Field Row -->
+                                    <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-800 space-y-1.5">
+                                        <div class="flex justify-between text-[11px] font-sans">
+                                            <span class="font-semibold text-slate-300">Primary Phone</span>
+                                            <span class="text-slate-500 text-[10px]">Target: Avoid blanking data</span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <button onclick="setMergeField('phone', '(646) 300-5501', 'master')" id="phone-opt-master" class="p-2 rounded border border-amber-500/50 bg-amber-950/60 text-amber-300 text-left transition truncate">
+                                                ● Record A: (646) 300-5501 <span class="text-[10px] text-amber-400 font-semibold">(Verified)</span>
+                                            </button>
+                                            <button onclick="setMergeField('phone', '[Blank / None]', 'duplicate')" id="phone-opt-duplicate" class="p-2 rounded border border-slate-700 bg-slate-800/80 text-slate-400 text-left transition hover:bg-slate-700 truncate">
+                                                ○ Record B: [Empty / Blank]
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email Field Row -->
+                                    <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-800 space-y-1.5">
+                                        <div class="flex justify-between text-[11px] font-sans">
+                                            <span class="font-semibold text-slate-300">Email Address</span>
+                                            <span class="text-slate-500 text-[10px]">Target: Keep active address</span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <button onclick="setMergeField('email', 'alex@olddomain.org', 'master')" id="email-opt-master" class="p-2 rounded border border-slate-700 bg-slate-800/80 text-slate-400 text-left transition hover:bg-slate-700 truncate">
+                                                ○ Record A: alex@olddomain.org <span class="text-[10px] text-slate-500">(Inactive)</span>
+                                            </button>
+                                            <button onclick="setMergeField('email', 'lazchristie@gmail.com', 'duplicate')" id="email-opt-duplicate" class="p-2 rounded border border-amber-500/50 bg-amber-950/60 text-amber-300 text-left transition truncate">
+                                                ● Record B: lazchristie@gmail.com <span class="text-[10px] text-amber-400 font-semibold">(Active / Recent)</span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bg-slate-950 border border-amber-500/30 rounded-xl p-3 text-xs space-y-1">
-                                <span class="text-amber-400 font-bold uppercase tracking-wider text-[10px] block">Live Output Preview</span>
-                                <p class="font-mono text-slate-300">Final Owner: <strong id="preview-owner-name" class="text-amber-300">Jonelle Carrera (Current)</strong></p>
-                                <p class="text-slate-500 text-[10px]">Source record moved safely into Recycle Bin.</p>
+
+                            <!-- Step 2: Dynamic Live Output Preview -->
+                            <div class="bg-slate-950 border border-amber-500/30 rounded-xl p-4 space-y-2.5">
+                                <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                                    <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Step 2: Live Preview of Final Merged Record</span>
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">Real-Time Output</span>
+                                </div>
+                                
+                                <div class="text-xs space-y-1.5 font-mono text-slate-200">
+                                    <p><span class="text-slate-500">Contact Owner:</span> <strong id="preview-owner" class="text-amber-300 font-semibold">Jonelle Carrera</strong></p>
+                                    <p><span class="text-slate-500">Primary Phone:</span> <strong id="preview-phone" class="text-amber-300 font-semibold">(646) 300-5501</strong></p>
+                                    <p><span class="text-slate-500">Email Address:</span> <strong id="preview-email" class="text-amber-300 font-semibold">lazchristie@gmail.com</strong></p>
+                                </div>
+                                
+                                <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
+                                    <span>Recycle Bin Status:</span>
+                                    <span class="text-slate-300 font-medium">Record B safely archived (recoverable)</span>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Footer Tag -->
                         <div class="pt-3 border-t border-slate-800/80 flex justify-between items-center text-xs text-slate-500 font-mono">
                             <span>Decanted from: Static Word/PDF</span>
-                            <span class="text-amber-400">Zero Ambiguity</span>
+                            <span class="text-amber-400">100% Policy Parity</span>
                         </div>
 
                     </div>
@@ -607,7 +785,6 @@ Signature</div>
                 <p class="text-slate-400 text-base">The complete design philosophy, typographic rules, and positioning architecture for Decanter.</p>
             </div>
 
-            <!-- Brand Matrix Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- Brand Persona -->
@@ -705,6 +882,12 @@ Signature</div>
                 gifts: 'Convert a Lead and Process a Salesforce Donation.pdf',
                 merge: 'OppNet - How To - Merge a Contact.docx'
             };
+            const appTitles = {
+                moves: 'Module 1: Moves Management',
+                apsona: 'Module 2: Apsona & Acknowledgements',
+                gifts: 'Module 3: Donation Processing (Scribe)',
+                merge: 'Module 4: Contact Deduplication'
+            };
 
             apps.forEach(k => {
                 document.getElementById('doc-content-' + k).classList.add('hidden');
@@ -716,60 +899,146 @@ Signature</div>
             document.getElementById('app-pane-' + appKey).classList.remove('hidden');
             document.getElementById('app-btn-' + appKey).className = 'px-3 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold transition';
             document.getElementById('doc-name-tag').innerText = fileNames[appKey];
+            document.getElementById('active-app-tag').innerText = appTitles[appKey];
         }
 
         function tabMoves(tab) {
-            if (tab === 'stages') {
-                document.getElementById('tm-view-stages').classList.remove('hidden');
-                document.getElementById('tm-view-email').classList.add('hidden');
-                document.getElementById('tm-btn-stages').className = 'flex-1 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold transition';
-                document.getElementById('tm-btn-email').className = 'flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
-            } else {
-                document.getElementById('tm-view-stages').classList.add('hidden');
-                document.getElementById('tm-view-email').classList.remove('hidden');
-                document.getElementById('tm-btn-email').className = 'flex-1 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold transition';
-                document.getElementById('tm-btn-stages').className = 'flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
-            }
+            ['gov', 'stages', 'email'].forEach(t => {
+                document.getElementById('tm-view-' + t).classList.add('hidden');
+                document.getElementById('tm-btn-' + t).className = 'flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+            });
+            document.getElementById('tm-view-' + tab).classList.remove('hidden');
+            document.getElementById('tm-btn-' + tab).className = 'flex-1 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold transition';
         }
 
-        const stageData = {
-            Prospect: { desc: 'The prospect is being researched/cultivated; no formal ask has been made yet.', rule: 'Close Date: 9/1/202X placeholder.' },
-            Cultivation: { desc: 'Gift officer is actively engaging donor in preparation to make an ask.', rule: 'Update close date to conversation start date.' },
-            Solicitation: { desc: 'A formal ask has been made to the prospect; awaiting decision.', rule: 'Set expected decision date within FY.' },
-            Committed: { desc: 'Pledge finalized! Mandatory trigger: generate next FY renewal opportunity.', rule: 'Update close date to pledge date.' }
+        const movesStagesData = {
+            Prospect: {
+                def: "The prospect is still being researched, qualified, or cultivated, and an official ask has not been made yet.",
+                rule: "While in Prospect stage, close date can be the first date of the FY (9/1/202X) as a placeholder.",
+                trigger: "Quarterly portfolio review with Development Operations."
+            },
+            Cultivation: {
+                def: "The Gift Officer is engaging the donor in preparation to make an ask.",
+                rule: "Update close date to reflect the date when renewal/cultivation conversations began.",
+                trigger: "Update projections and stage in real time (*)."
+            },
+            Solicitation: {
+                def: "The Gift Officer has made an official ask to the prospect.",
+                rule: "Update close date to match anticipated decision or pledge date within the FY.",
+                trigger: "Ensure low, medium, and high projections (*) are updated."
+            },
+            Committed: {
+                def: "The prospect has made a firm pledge.",
+                rule: "Update close date to reflect the date the pledge was finalized.",
+                trigger: "MANDATORY TRIGGER: If renewing/upgrading next FY, create renewal Opportunity for next FY."
+            },
+            Received: {
+                def: "The payment has been received (in the off-chance the Opportunity Record was not created first).",
+                rule: "Update close date to match the deposit/processing date.",
+                trigger: "Final successful terminal milestone."
+            },
+            Declined: {
+                def: "The prospect declined to make the gift.",
+                rule: "Set close date to the date of the donor's decision.",
+                trigger: "Log pertinent activity and reason for decline in task history."
+            },
+            Withdrawn: {
+                def: "The gift officer did not follow through with an ask, or the prospect made and rescinded a pledge.",
+                rule: "Set close date to the date the opportunity was withdrawn.",
+                trigger: "Document context in task history on the record."
+            }
         };
 
         function setMoveStage(stg) {
-            ['Prospect', 'Cultivation', 'Solicitation', 'Committed'].forEach(s => {
-                document.getElementById('m-btn-' + s).className = 'p-2 rounded bg-slate-800 border border-slate-700 text-slate-300 truncate';
+            const allStages = ['Prospect', 'Cultivation', 'Solicitation', 'Committed', 'Received', 'Declined', 'Withdrawn'];
+            allStages.forEach(s => {
+                const btn = document.getElementById('m-btn-' + s);
+                if (btn) {
+                    if (s === 'Declined') {
+                        btn.className = 'p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-rose-300 truncate';
+                    } else if (s === 'Withdrawn') {
+                        btn.className = 'p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-amber-300 truncate';
+                    } else {
+                        btn.className = 'p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 truncate';
+                    }
+                }
             });
-            document.getElementById('m-btn-' + stg).className = 'p-2 rounded bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold truncate';
-            document.getElementById('m-title').innerText = stg + ' Stage';
-            document.getElementById('m-desc').innerText = stageData[stg].desc;
-            document.getElementById('m-rule').innerText = stageData[stg].rule;
+
+            const activeBtn = document.getElementById('m-btn-' + stg);
+            if (activeBtn) {
+                if (stg === 'Declined') {
+                    activeBtn.className = 'p-1.5 rounded-lg bg-rose-950 border border-rose-500/50 text-rose-200 font-semibold truncate';
+                } else if (stg === 'Withdrawn') {
+                    activeBtn.className = 'p-1.5 rounded-lg bg-amber-950 border border-amber-500/50 text-amber-200 font-semibold truncate';
+                } else {
+                    activeBtn.className = 'p-1.5 rounded-lg bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold truncate';
+                }
+            }
+
+            const data = movesStagesData[stg];
+            document.getElementById('m-stage-title').innerText = stg + ' Stage';
+            document.getElementById('m-stage-def').innerText = data.def;
+            document.getElementById('m-stage-rule').innerText = data.rule;
+            document.getElementById('m-stage-trigger').innerText = data.trigger;
+            document.getElementById('m-stage-badge').innerText = stg + ' Active';
+        }
+
+        function generateDelegationEmail() {
+            const record = document.getElementById('delegation-record').value.trim() || 'John Smith Contact Record';
+            const fields = document.getElementById('delegation-fields').value.trim() || 'New Title & Phone Number';
+            const body = `Hi Development Team,\n\nCould you please help update the following information in Salesforce?\n\n• Record: ${record}\n• Updates: ${fields}\n\nThank you!`;
+            
+            document.getElementById('preview-body').innerText = body;
+            document.getElementById('email-preview-card').classList.remove('hidden');
+        }
+
+        function copyGeneratedEmail() {
+            const text = document.getElementById('preview-body').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.innerText = 'Copied!';
+                setTimeout(() => btn.innerText = 'Copy Text', 2000);
+            });
         }
 
         function setTax(t) {
             ['direct', 'daf', 'inkind'].forEach(k => {
-                document.getElementById('tax-btn-' + k).className = 'p-2 rounded bg-slate-800 border border-slate-700 text-slate-300';
+                document.getElementById('tax-btn-' + k).className = 'p-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-300';
             });
-            document.getElementById('tax-btn-' + t).className = 'p-2 rounded bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold';
+            document.getElementById('tax-btn-' + t).className = 'p-2 rounded-lg bg-amber-950 border border-amber-500/50 text-amber-300 font-semibold';
             
             const target = document.getElementById('tax-text');
             if (t === 'direct') target.innerText = 'Standard 501(c)(3) tax deductible wording included on letter.';
-            if (t === 'daf') target.innerHTML = '<strong class="text-rose-400">REMOVE TAX LANGUAGE:</strong> DAFs (Fidelity, Goldman Sachs Gives) & 3rd-Party Processors (Benevity, Cybergrants) already received tax credit.';
+            if (t === 'daf') target.innerHTML = '<strong class="text-rose-400">REMOVE TAX LANGUAGE:</strong> Gifts from DAFs (Fidelity, Goldman Sachs Gives) or 3rd-Party Processors (Benevity, Cybergrants) have already received tax credit.';
             if (t === 'inkind') target.innerText = 'The Opportunity Network is a 501(c)3 organization. Our tax ID number is 43-1984494. No goods or services were provided in exchange for your in-kind contribution.';
         }
 
-        function setMergeOwner(val, src) {
-            if (src === 'm') {
-                document.getElementById('m-owner-m').className = 'p-2 rounded border border-amber-500/50 bg-amber-950 text-amber-300 text-left font-bold truncate';
-                document.getElementById('m-owner-d').className = 'p-2 rounded border border-slate-700 bg-slate-800 text-slate-400 text-left truncate';
+        function copyAckEmail() {
+            const text = document.getElementById('ack-email-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('ack-copy-btn');
+                btn.innerText = 'Copied!';
+                setTimeout(() => btn.innerText = 'Copy Template', 2000);
+            });
+        }
+
+        function setMergeField(field, value, source) {
+            const masterBtn = document.getElementById(field + '-opt-master');
+            const dupBtn = document.getElementById(field + '-opt-duplicate');
+            
+            if (source === 'master') {
+                masterBtn.className = 'p-2 rounded border border-amber-500/50 bg-amber-950/60 text-amber-300 text-left transition truncate';
+                dupBtn.className = 'p-2 rounded border border-slate-700 bg-slate-800/80 text-slate-400 text-left transition hover:bg-slate-700 truncate';
+                masterBtn.innerText = masterBtn.innerText.replace('○', '●');
+                dupBtn.innerText = dupBtn.innerText.replace('●', '○');
             } else {
-                document.getElementById('m-owner-d').className = 'p-2 rounded border border-amber-500/50 bg-amber-950 text-amber-300 text-left font-bold truncate';
-                document.getElementById('m-owner-m').className = 'p-2 rounded border border-slate-700 bg-slate-800 text-slate-400 text-left truncate';
+                dupBtn.className = 'p-2 rounded border border-amber-500/50 bg-amber-950/60 text-amber-300 text-left transition truncate';
+                masterBtn.className = 'p-2 rounded border border-slate-700 bg-slate-800/80 text-slate-400 text-left transition hover:bg-slate-700 truncate';
+                dupBtn.innerText = dupBtn.innerText.replace('○', '●');
+                masterBtn.innerText = masterBtn.innerText.replace('●', '○');
             }
-            document.getElementById('preview-owner-name').innerText = val;
+
+            document.getElementById('preview-' + field).innerText = value;
         }
     </script>
 </body>
